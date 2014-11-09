@@ -1,4 +1,6 @@
+// Start of jquery
 
+// This section for the smooth scroll to different sections of the page
 $(document).ready(function() {
   function filterPath(string) {
   return string
@@ -48,4 +50,61 @@ $(document).ready(function() {
  
 });
 
+$(document).scroll(function(){
+  var y = $(this).scrollTop();
+
+  if (y > 800) {
+    $('nav').fadeIn();
+  } else {
+    $('nav').fadeOut();
+  }
+});
+
+$(document).ready(function(){
+
+  var hello = $('.hello-background');
+
+  var backgrounds = new Array(
+      'url(images/Optimized-bwforrest.jpg)',
+      'url(images/Optimized-camera.jpeg)',
+      'url(images/Optimized-coffee.jpg)',
+      'url(images/Optimized-concert.jpeg)',
+      'url(images/Optimized-flock.jpg)',
+      'url(images/Optimized-goldengate.jpg)',
+      'url(images/Optimized-lifeguard.jpg)',
+      'url(images/Optimized-motel.jpg)',
+      'url(images/Optimized-neighborhood.jpg)',
+      'url(images/Optimized-skater.jpg)',
+      'url(images/Optimized-sparkler.jpeg)',
+      'url(images/Optimized-traffic.jpg)',
+      'url(images/Optimized-vwbus.jpg)'
+    );
+
+  var current = 0;
+
+  function nextBackground() {
+    current++;
+    current = current % backgrounds.length;
+    hello.css('background-image', backgrounds[current]);
+  }
+
+  setInterval(nextBackground, 3000);
+
+  hello.css('background-image', backgrounds[0]);
+});
 // End of jquery section
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
