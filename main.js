@@ -92,6 +92,7 @@ $(document).ready(function(){
 
   hello.css('background-image', backgrounds[0]);
 });
+
 // End of jquery section
 
 
