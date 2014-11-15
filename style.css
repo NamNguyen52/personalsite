@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Code Light";
+    src: url(code_light.otf);
+}
+
+@font-face {
+    font-family: "Code Bold";
+    src: url(code_bold.otf);
+}
+
 body {
 	margin: 0;
 }
@@ -41,6 +51,11 @@ nav li a {
 	text-decoration: none;
 	color: #FEFEF2;
 	letter-spacing: 4px;
+}
+
+nav li a:hover {
+	text-decoration: underline;
+	color: #FEFEF2;
 }
 
 
@@ -249,7 +264,7 @@ video#bgvid {
 	border: 1px solid transparent;
 	width: 800px;
 	height: 700px;
-	margin-top: 100px;
+	margin-top: 125px;
 	margin-right: auto;
 	margin-left: auto;
 	padding: 4px;
@@ -277,8 +292,57 @@ video#bgvid {
 	width: 395px;
 	position: relative;
 	margin-top: 8px;
-	background: url(images/pulp.png);
+	background: url(images/pulp.png) no-repeat;
 	background-position: center center;
+	background-size: 340%;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	overflow: hidden;
+}
+
+.project-1:hover {
+	background-size: 390%;
+}
+
+.project-image-overlay {
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	opacity: 0;
+	-webkit-transition: opacity 0.3s ease;
+	-moz-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
+	text-align: left;
+	padding-left: 10px;
+	color: #FEFEF2;
+	padding-top: 5px;
+}
+
+.project-image-overlay > h3 {
+	font-family: Code Light;
+	font-size: 40px;
+	letter-spacing: 3px;
+}
+
+.project-image-overlay > p {
+	font-family: Code Bold;
+	font-size: 12px;
+	letter-spacing: 5px;
+}
+
+.project-image-overlay a {
+	color: inherit;
+	text-decoration: underline;
+	transition: color 0.5s ease;
+}
+
+.project-image-overlay a:hover {
+	color: red;
+} 
+
+.project-image-overlay:hover {
+	opacity: 1;
 }
 
 .project-2 {
@@ -287,7 +351,15 @@ video#bgvid {
 	position: relative;
 	margin-top: 8px;
 	background: url(images/trailer.png) 80% 10%;
-	background-position: cover;
+	background-size: 340%;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	overflow: hidden;
+}
+
+.project-2:hover {
+	background-size: 390%;
 }
 
 .project-3 {
@@ -297,6 +369,15 @@ video#bgvid {
 	float: right;
 	margin-top: -691px;
 	background: url(images/jidlo.png) 40% 65%;
+	background-size: 340%;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	overflow: hidden;
+}
+
+.project-3:hover {
+	background-size: 390%;
 }
 
 .project-4 {
@@ -306,60 +387,83 @@ video#bgvid {
 	float: right;
 	margin-top: -381px;
 	background: url(images/geodeals.png);
+	background-size: 340%;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	overflow: hidden;
 }
+
+.project-4:hover {
+	background-size: 390%
+}
+
 /* End of portfolio section */
 
 /* Contact Section */
 
-.cl-effect-5 a {
-	overflow: hidden;
-	padding: 0 4px;
-	height: 1em;
-}
-
-.cl-effect-5 a span {
-	position: relative;
-	display: inline-block;
-	-webkit-transition: -webkit-transform 0.5s;
-	-moz-transition: -moz-transform 0.5s;
-	transition: transform 0.5s;
-}
-
-.cl-effect-5 a span::before {
-	position: absolute;
-	top: 100%;
-	content: attr(data-hover);
-	font-weight: 700;
-	-webkit-transform: translate3d(0,0,0);
-	-moz-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
-}
-
-.cl-effect-5 a:hover span,
-.cl-effect-5 a:focus span {	
-	-webkit-transform: translateY(-100%);
-	-moz-transform: translateY(-100%);
-	transform: translateY(-100%);   
-}
-
-.section-4-container {
+.contact-container {
 	height: 100%;
 	width: 100%;
-	border: 1px solid white;
+	border: 1px solid transparent;
 }
 
-.color-5 {
+.contact-window {
+	height: 250px;
+	width: 950px; 
 	position: relative;
+	margin-top: 270px;
+	margin-right: auto;
+	margin-left: auto;
 	overflow: hidden;
-	margin-top: 30vh;
-	text-align: center;
-	word-spacing: 200px;
 }
 
-#github img {
-	height: 300px;
-	width: 300px;
+.contact-content {
+	position: relative;
+	height: 500px;
+	width: 925px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0px;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
+
+.contact-content:hover {
+	margin-top: -270px;
+}
+
+.contact-content h1 {
+	font-family: sans-serif;
+	font-size: 120px;
+	padding-top: 15px;
+	text-align: center;
+	margin-top: -25px;
+}
+
+.contact-content ul {
+	text-align: center;
+}
+
+.contact-content ul li {
+	font-family: Code Bold;
+	font-size: 50px;
+}
+
+.contact-content ul li a {
+	text-decoration: none;
+	color: black;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.contact-content ul li a:hover {
+	text-decoration: underline;
+	color: #E03C31;
+}
+
 
 /* End of contact section */
 
